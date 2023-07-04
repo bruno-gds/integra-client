@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  sky:
+    build: .
+    ports:
+      - "8099:8080"
