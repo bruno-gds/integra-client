@@ -9,64 +9,54 @@ import com.vip.domain.Integra;
  */
 
 public class IntegraJson {
-    String calldate;
-    String src;
+    String org;
     String dst;
-    String duration;
-    String billsec;
+    String start;
     String disposition;
+    String uniqueid;
     String userfield;
     String accountcode;
-    String price;
+    int emp;
+    String duration;
+    int billsec;
+    String urlRecord;
+    float price;
 
     public IntegraJson() {}
 
-    public IntegraJson(String calldate, String src, String dst, String duration, String billsec, String disposition, String userfield, String accountcode, String price) {
-        this.calldate = calldate;
-        this.src = src;
-        this.dst = dst;
-        this.duration = duration;
-        this.billsec = billsec;
-        this.disposition = disposition;
-        this.userfield = userfield;
-        this.accountcode = accountcode;
-        this.price = price;
-    }
-
     public IntegraJson(Integra integra) {
-        this.calldate = integra.getCalldate();
-        this.src = integra.getSrc();
+        this.org = integra.getOrg();
         this.dst = integra.getDst();
-        this.duration = integra.getDuration();
-        this.billsec = integra.getBillsec();
+        this.start = integra.getStart();
         this.disposition = integra.getDisposition();
+        this.uniqueid = integra.getUniqueid();
         this.userfield = integra.getUserfield();
         this.accountcode = integra.getAccountcode();
+        this.emp = integra.getEmp();
+        this.duration = integra.getDuration();
+        this.billsec = integra.getBillsec();
+        this.urlRecord = integra.getUrlRecord();
         this.price = integra.getPrice();
     }
 
-    public String getCalldate() {
-        return calldate;
-    }
-
-    public String getSrc() {
-        return src;
+    public String getOrg() {
+        return org;
     }
 
     public String getDst() {
         return dst;
     }
 
-    public String getDuration() {
-        return duration;
-    }
-
-    public String getBillsec() {
-        return billsec;
+    public String getStart() {
+        return start;
     }
 
     public String getDisposition() {
         return disposition;
+    }
+
+    public String getUniqueid() {
+        return uniqueid;
     }
 
     public String getUserfield() {
@@ -77,7 +67,23 @@ public class IntegraJson {
         return accountcode;
     }
 
-    public String getPrice() {
+    public int getEmp() {
+        return emp;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public int getBillsec() {
+        return billsec;
+    }
+
+    public String getUrlRecord() {
+        return urlRecord;
+    }
+
+    public float getPrice() {
         return price;
     }
 }

@@ -8,123 +8,159 @@ package com.vip.domain;
 
 public class Integra {
 
-    private String calldate;
-    private String src;
-    private String dst;
-    private String duration;
-    private String billsec;
-    private String disposition;
-    private String userfield;
-    private String accountcode;
-    private String price;
+    String org;
+    String dst;
+    String start;
+    String disposition;
+    String uniqueid;
+    String userfield;
+    String accountcode;
+    int emp;
+    String duration;
+    int billsec;
+    String urlRecord;
+    float price;
 
     public Integra() {}
 
     public Integra(
-            String calldate,
-            String src,
+            String org,
             String dst,
-            String duration,
-            String billsec,
+            String start,
             String disposition,
+            String uniqueid,
             String userfield,
             String accountcode,
-            String price) {
-        this.calldate = calldate;
-        this.src = src;
+            int emp,
+            String duration,
+            int billsec,
+            String urlRecord,
+            float price) {
+        this.org = org;
         this.dst = dst;
-        this.duration = duration;
-        this.billsec = billsec;
+        this.start = start;
         this.disposition = disposition;
+        this.uniqueid = uniqueid;
         this.userfield = userfield;
         this.accountcode = accountcode;
+        this.emp = emp;
+        this.duration = duration;
+        this.billsec = billsec;
+        this.urlRecord = urlRecord;
         this.price = price;
     }
 
-    public String getCalldate() {
-        return calldate;
+    public String getOrg() {
+        return org;
     }
 
-    public String getSrc() {
-        return src;
+    public void setOrg(String org) {
+        this.org = org;
     }
 
     public String getDst() {
         return dst;
     }
 
-    public String getDuration() {
-        return duration;
+    public void setDst(String dst) {
+        this.dst = dst;
     }
 
-    public String getBillsec() {
-        return billsec;
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
     }
 
     public String getDisposition() {
         return disposition;
     }
 
-    public String getUserfield() {
-        return userfield;
-    }
-
-    public String getAccountcode() {
-        return accountcode;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setCalldate(String calldate) {
-        this.calldate = calldate;
-    }
-
-    public void setSrc(String src) {
-        this.src = src;
-    }
-
-    public void setDst(String dst) {
-        this.dst = dst;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
-    public void setBillsec(String billsec) {
-        this.billsec = billsec;
-    }
-
     public void setDisposition(String disposition) {
         this.disposition = disposition;
+    }
+
+    public String getUniqueid() {
+        return uniqueid;
+    }
+
+    public void setUniqueid(String uniqueid) {
+        this.uniqueid = uniqueid;
+    }
+
+    public String getUserfield() {
+        return userfield;
     }
 
     public void setUserfield(String userfield) {
         this.userfield = userfield;
     }
 
+    public String getAccountcode() {
+        return accountcode;
+    }
+
     public void setAccountcode(String accountcode) {
         this.accountcode = accountcode;
     }
 
-    public void setPrice(String price) {
+    public int getEmp() {
+        return emp;
+    }
+
+    public void setEmp(int emp) {
+        this.emp = emp;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public int getBillsec() {
+        return billsec;
+    }
+
+    public void setBillsec(int billsec) {
+        this.billsec = billsec;
+    }
+
+    public String getUrlRecord() {
+        return urlRecord;
+    }
+
+    public void setUrlRecord(String urlRecord) {
+        this.urlRecord = urlRecord;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
         this.price = price;
     }
 
     @Override
     public String toString() {
         return "Integra{" +
-                "calldate='" + calldate + '\'' +
-                ", src='" + src + '\'' +
+                "org='" + org + '\'' +
                 ", dst='" + dst + '\'' +
-                ", duration='" + duration + '\'' +
-                ", billsec='" + billsec + '\'' +
+                ", start='" + start + '\'' +
                 ", disposition='" + disposition + '\'' +
+                ", uniqueid='" + uniqueid + '\'' +
                 ", userfield='" + userfield + '\'' +
                 ", accountcode='" + accountcode + '\'' +
-                ", price='" + price + '\'' +
+                ", emp=" + emp +
+                ", duration='" + duration + '\'' +
+                ", billsec=" + billsec +
+                ", urlRecord='" + urlRecord + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

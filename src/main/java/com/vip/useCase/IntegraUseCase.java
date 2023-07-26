@@ -20,17 +20,20 @@ public class IntegraUseCase {
     @Autowired
     private IntegraRepository integraRepository;
 
-    public Integra save(IntegraJson integra) {
+    public Integra save(IntegraJson integraJson) {
         Integra data = new Integra();
-        data.setCalldate(integra.getCalldate());
-        data.setSrc(integra.getSrc());
-        data.setDst(integra.getDst());
-        data.setDuration(integra.getDuration());
-        data.setBillsec(integra.getBillsec());
-        data.setDisposition(integra.getDisposition());
-        data.setUserfield(integra.getUserfield());
-        data.setAccountcode(integra.getAccountcode());
-        data.setPrice(integra.getPrice());
+        data.setOrg(integraJson.getOrg());
+        data.setDst(integraJson.getDst());
+        data.setStart(integraJson.getStart());
+        data.setDisposition(integraJson.getDisposition());
+        data.setUniqueid(integraJson.getUniqueid());
+        data.setUserfield(integraJson.getUserfield());
+        data.setAccountcode(integraJson.getAccountcode());
+        data.setEmp(integraJson.getEmp());
+        data.setDuration(integraJson.getDuration());
+        data.setBillsec(integraJson.getBillsec());
+        data.setUrlRecord(integraJson.getUrlRecord());
+        data.setPrice(integraJson.getPrice());
 
         integraRepository.save(data);
 
