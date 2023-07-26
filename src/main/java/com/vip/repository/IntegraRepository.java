@@ -29,4 +29,8 @@ public class IntegraRepository {
     public Set<Integra> findAll() {
         return integraSet;
     }
+
+    public void clear() {
+        integraSet.clear();
+    }
 }

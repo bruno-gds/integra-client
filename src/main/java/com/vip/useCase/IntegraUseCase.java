@@ -37,7 +37,11 @@ public class IntegraUseCase {
         return data;
     }
 
-    public Set<Integra> findAll(){
+    public Set<Integra> findAll() {
         return integraRepository.findAll();
+    }
+
+    public void clearSet() {
+        integraRepository.clear();
     }
 }
